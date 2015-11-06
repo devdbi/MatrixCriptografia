@@ -8,19 +8,17 @@ public class Criptografia extends MSG{
 	*/
 	public static void main (String [] args)
 	{
-		MSG msg = new MSG(); 
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Informe o texto a ser criptografado: ");
 		String txt = scan.nextLine();
 
-		msg.set(txt);
+		System.out.println("Informe a palavra chave: ");
+		String key = scan.nextLine();
 
-		msg.toMatrix();
+		MSG msg = new MSG(txt, key); 
 
 		//Mensagem final
 		System.out.println("msg = "+msg.get());
-
-		msg.showMatrix();
 	}
 }
